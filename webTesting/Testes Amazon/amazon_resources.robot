@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 
 
 *** Variables ***
@@ -13,6 +14,7 @@ ${BOTÃO_DE_PESQUISA}         nav-search-submit-button
 ${CLIQUE_PRODUTO}            //span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
 ${ADICIONAR_CARRINHO}        add-to-cart-button
 ${PRODUTO_ADICIONADO}        sw-all-product-variations
+${BOTAO_EXCLUIR}             //input[@value='Excluir']
 
 *** Keywords ***
 Abrir o navegador
@@ -84,3 +86,19 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se está listando o produto pesquisado
+
+E adiciono o produto "Console Xbox Series S" no carrinho
+    Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da pesquisa se está listando o produto pesquisado
+    Adicionar o produto "Console Xbox Series S" no carrinho
+    Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+
+Quando removo o produto "Console Xbox Series S" do carrinho
+    Click Element    locator=//a[contains(@data-csa-c-type,'button')]
+    Wait Until Page Contains    text=Carrinho de compras
+    Click Element    locator=${BOTAO_EXCLUIR}
+
+Então o carrinho deverá ficar vazio
+    Wait Until Page Contains    text=Seu carrinho de compras da Amazon está vazio.
+    

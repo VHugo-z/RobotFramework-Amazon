@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-12T10:40:55.861567" rpa="false" schemaversion="5">
+<suite id="s1" name="TesteLista" source="C:\Projetos\Victor\RobotFramework-Amazon\webTesting\TesteLista.robot">
+<test id="s1-t1" name="Mostrar os meses do ano" line="12">
+<kw name="Mostrar meses">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-12T10:40:55.918270" level="INFO">Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro</msg>
+<arg>${MESES[0]} ${MESES[1]} ${MESES[2]} ${MESES[3]} ${MESES[4]} ${MESES[5]} ${MESES[6]} ${MESES[7]} ${MESES[8]} ${MESES[9]} ${MESES[10]} ${MESES[11]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-12T10:40:55.914271" elapsed="0.003999"/>
+</kw>
+<status status="PASS" start="2024-08-12T10:40:55.913275" elapsed="0.004995"/>
+</kw>
+<status status="PASS" start="2024-08-12T10:40:55.913275" elapsed="0.004995"/>
+</test>
+<doc>Esse teste rodará a lista com todos os meses do ano.</doc>
+<status status="PASS" start="2024-08-12T10:40:55.864567" elapsed="0.056706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteLista">TesteLista</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
