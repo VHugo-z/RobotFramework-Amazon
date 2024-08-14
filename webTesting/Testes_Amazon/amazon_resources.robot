@@ -9,7 +9,7 @@ ${URL}                       https://amazon.com.br
 ${MENU_LIVROS}               //a[contains(.,'Livros')]
 ${HEADER_LIVROS}             //h2[contains(.,'Loja de Livros')]
 ${ELEMENT}                   //li[contains(@class,'sl-sobe-carousel-sub-card celwidget csm-placement-id-35dcfecf-9720-4df1-bc96-90b1c62e4ca9_1 csm-widget-ref-fd21_1 csm-pageid-6740748011 csm-widget-type-horizontaleditorial-tile csm-widget-tile-1')]
-${BARRA_DE_PESQUISA}         twotabsearchtextbox
+${BARRA_DE_PESQUISA}         //input[contains(@type,'submit')]
 ${BOTÃO_DE_PESQUISA}         nav-search-submit-button
 ${CLIQUE_PRODUTO}            //span[@class='a-size-base-plus a-color-base a-text-normal'][contains(.,'Console Xbox Series S')]
 ${ADICIONAR_CARRINHO}        add-to-cart-button
