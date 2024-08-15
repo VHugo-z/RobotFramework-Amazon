@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-14T15:04:44.466395" rpa="false" schemaversion="5">
+<suite id="s1" name="Serve Rest Test" source="g:\Programação\RobotFramework-Amazon\Serve_Rest_Site\Serve_Rest_Test.robot">
+<test id="s1-t1" name="Caso de teste 02: Registro" line="17">
+<kw name="Abrir o site" owner="Serve_Rest_Site_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:44.681298" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-14T15:04:44.680298" elapsed="1.292283"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.973583" elapsed="0.022527"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-14T15:04:45.997111" level="INFO">${RANDOM_EMAIL_CADASTRO} = KvkZLyyJ</msg>
+<var>${RANDOM_EMAIL_CADASTRO}</var>
+<arg>length=8</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.996110" elapsed="0.001001"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-14T15:04:45.997111" level="INFO">${NOME_CADASTRO} = rBcvz</msg>
+<var>${NOME_CADASTRO}</var>
+<arg>length=5</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.997111" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-08-14T15:04:45.998113" level="INFO">${SENHA_CADASTRO} = ZwJNg1bisk</msg>
+<var>${SENHA_CADASTRO}</var>
+<arg>length=10</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.997111" elapsed="0.001002"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-08-14T15:04:45.998113" level="INFO">${NOME} = rBcvz</msg>
+<arg>${NOME}</arg>
+<arg>${NOME_CADASTRO}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.998113" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-08-14T15:04:46.011124" level="INFO">${SENHA} = ZwJNg1bisk</msg>
+<arg>${SENHA}</arg>
+<arg>${SENHA_CADASTRO}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-08-14T15:04:45.999113" elapsed="0.012011"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-08-14T15:04:46.012126" level="INFO">${RANDOM_EMAIL} = KvkZLyyJ</msg>
+<arg>${RANDOM_EMAIL}</arg>
+<arg>${RANDOM_EMAIL_CADASTRO}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-08-14T15:04:46.011124" elapsed="0.001002"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:44.680298" elapsed="1.331828"/>
+</kw>
+<kw name="Dado que eu acesse o site &quot;https://front.serverest.dev/login&quot;" owner="Serve_Rest_Site_resources" source_name="Dado que eu acesse o site &quot;${SITE}&quot;">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:46.013126" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
+<arg>url=${SITE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-14T15:04:46.013126" elapsed="2.923821"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-14T15:04:48.936947" elapsed="0.008346"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:46.013126" elapsed="2.932167"/>
+</kw>
+<kw name="Quando clicar em Cadastrar-se" owner="Serve_Rest_Site_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:48.946289" level="INFO">Clicking element '//a[@data-testid='cadastrar'][contains(.,'Cadastre-se')]'.</msg>
+<arg>locator=${CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:48.946289" elapsed="0.035542"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=Cadastro</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-14T15:04:48.982831" elapsed="0.008007"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:48.945293" elapsed="0.045545"/>
+</kw>
+<kw name="E preencher as informações com administrador" owner="Serve_Rest_Site_resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:48.991838" level="INFO">Typing text 'rBcvz' into text field '//input[contains(@name,'nome')]'.</msg>
+<arg>locator=${CAIXA_NOME}</arg>
+<arg>text=${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:48.991838" elapsed="0.060459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:49.052297" level="INFO">Typing text 'KvkZLyyJ@gmail.com' into text field '//input[contains(@name,'email')]'.</msg>
+<arg>locator=${CAIXA_EMAIL}</arg>
+<arg>text=${RANDOM_EMAIL}@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:49.052297" elapsed="0.059971"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:49.112268" level="INFO">Typing text 'ZwJNg1bisk' into text field '//input[contains(@name,'password')]'.</msg>
+<arg>locator=${CAIXA_SENHA}</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:49.112268" elapsed="0.054240"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:49.167508" level="INFO">Selecting checkbox '//input[contains(@name,'administrador')]'.</msg>
+<arg>locator=${CHECKBOX_ADMNISTRADOR}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:49.166508" elapsed="0.043570"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:48.991838" elapsed="0.219240"/>
+</kw>
+<kw name="E clicar em Cadastrar" owner="Serve_Rest_Site_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:49.212079" level="INFO">Clicking element '//button[@data-testid='cadastrar'][contains(.,'Cadastrar')]'.</msg>
+<arg>locator=${CADASTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-14T15:04:49.211078" elapsed="0.028658"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:49.211078" elapsed="0.029659"/>
+</kw>
+<kw name="Então deverá aparecer &quot;Cadastro realizado com sucesso&quot;" owner="Serve_Rest_Site_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=//div[@class='alert alert-dismissible alert-primary'][contains(.,'×Cadastro realizado com sucesso')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-14T15:04:49.240737" elapsed="1.450646"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:49.240737" elapsed="1.450646"/>
+</kw>
+<kw name="Fechar o site" owner="Serve_Rest_Site_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-14T15:04:51.027003" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-14T15:04:50.692385" elapsed="0.334618"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-14T15:04:51.028004" elapsed="2.116443"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:50.692385" elapsed="2.452062"/>
+</kw>
+<status status="PASS" start="2024-08-14T15:04:44.678236" elapsed="8.466211"/>
+</test>
+<doc>Essa suite irá testar várias funcionalidades do site front.serverest.dev/login</doc>
+<status status="PASS" start="2024-08-14T15:04:44.471399" elapsed="8.674252"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Serve Rest Test">Serve Rest Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

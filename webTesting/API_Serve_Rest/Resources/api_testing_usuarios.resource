@@ -62,8 +62,8 @@ Consultar os dados do novo usuário
 
 Conferir os dados retornados
     Log    ${RESP_CONSULTA}
-    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=nome    value=Fulano da silva
-    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=email    value=${Email_Teste}
-    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=password    value=1234
+    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=nome             value=Fulano da silva
+    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=email            value=${Email_Teste}
+    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=password         value=1234
     Dictionary Should Contain Item    ${RESP_CONSULTA}    key=administrador    value=true
-    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=_id    value=${ID_USUARIO}
+    Dictionary Should Contain Item    ${RESP_CONSULTA}    key=_id              value=${ID_USUARIO}
