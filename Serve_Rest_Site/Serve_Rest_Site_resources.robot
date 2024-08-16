@@ -3,7 +3,6 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 Library    Screenshot
 Library    String
-Library    Faker
 
 *** Variables ***
 ${CAIXA_EMAIL}               //input[contains(@name,'email')]
