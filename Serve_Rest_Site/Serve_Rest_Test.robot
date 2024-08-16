@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Essa suite irá testar várias funcionalidades do site front.serverest.dev/login
 Resource         Serve_Rest_Site_resources.robot
+Resource    ../webTesting/Testes_Amazon/amazon_resources.robot
 Test Setup       Abrir o site
 Test Teardown    Fechar o site
 
@@ -61,5 +62,19 @@ Caso de teste 08: Cadastro de usuário
     Quando preencho as informações necessárias
     E clico em cadastrar usuários com admnistrador
     Então deverá aparecer a lista dos usuários
+
+Caso de teste 09: Cadastrar produto
+    Dado que eu estou no site "https://front.serverest.dev/login"
+    E entro na conta
+    E clico em cadastrar Produtos
+    Quando preencho as informações de produto
+    E clico em cadastrar produto
+    Então deverá aparecer a lista dos produtos
+    
+Caso de teste 09: Relatório em construção
+    Dado que eu estou no site "https://front.serverest.dev/login"
+    E entro na conta
+    Quando clico em Relatórios
+    Entao deverá aparecer Em construção aguarde
 
     
